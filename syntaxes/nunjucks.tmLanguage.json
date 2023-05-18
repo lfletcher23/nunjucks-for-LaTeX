@@ -35,11 +35,11 @@
             "patterns": [
                 {
                     "name": "constant.language.nunjucks",
-                    "match": "((true|false|and|or|not|as|in)\\b)}"
+                    "match": "((true|false)\\b)"
                 },
                 {
                     "name": "constant.language.nunjucks",
-                    "match": "((safe|title|capitalize|join|escape|dump|first|float|groupby|abs|batch|center|default|dictsort|forceescape|indent|int|last|length|list|lower|random|reject|rejectattr|replace|reverse|round|safe|select|selectattr|slice|sort|string|striptags|sum|title|trim|truncate|upper|urlencode|urlize|wordcount)\\b)}"
+                    "match": "((safe|escape)\\b)"
                 },
                 {
                     "name": "keyword.operator.nunjucks",
@@ -51,11 +51,11 @@
                 },
                 {
                     "name": "variable.language.nunjucks",
-                    "match": "((import|extends|from|include|new|ignore|missing|var|context)\\b)"
+                    "match": "((and|or|not|as|in|import|extends|from|include|new|ignore|missing|var|context)\\b)"
                 },
                 {
                     "name": "string.nunjucks",
-                    "match": "([\"'])(?:(?=(\\?))\\2.)*?\\1"
+                    "match": "([\"'])(?:(?=(\\\\?))\\2.)*?\\1"
                 },
                 {
                     "name": "entity.name.function.nunjucks",
@@ -72,7 +72,7 @@
             "patterns": [
                 {
                     "name": "string.nunjucks",
-                    "match": "([\"'])(?:(?=(\\?))\\2.)*?\\1"
+                    "match": "([\"'])(?:(?=(\\\\?))\\2.)*?\\1"
                 }
             ]
         }
