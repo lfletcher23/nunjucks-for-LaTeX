@@ -51,7 +51,7 @@
                 },
                 {
                     "name": "string.nunjucks",
-                    "match": "([\".])(?:(?=(\\\\?))\\2.)*?\\1"
+                    "match": "([\"'])(?:(?=(\\?))\\2.)*?\\1"
                 },
                 {
                     "name": "entity.name.function.nunjucks",
@@ -68,7 +68,7 @@
             "patterns": [
                 {
                     "name": "string.nunjucks",
-                    "match": "([\".])(?:(?=(\\\\?))\\2.)*?\\1"
+                    "match": "([\"'])(?:(?=(\\?))\\2.)*?\\1"
                 }
             ]
         }
