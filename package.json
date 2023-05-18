@@ -2,7 +2,8 @@
   "name": "nunjucks-for-latex",
   "displayName": "nunjucks-for-LaTeX",
   "description": "custom nunjucks syntax to be LaTeX compatible",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "publisher": "lfletcher23",
   "engines": {
     "vscode": "^1.78.0"
   },
