@@ -1,0 +1,25 @@
+{
+  "name": "nunjucks-for-latex",
+  "displayName": "nunjucks-for-LaTeX",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "nunjucks",
+      "aliases": ["nunjucks", "nunjucks"],
+      "extensions": [".njk",".nunjucks"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "nunjucks",
+      "scopeName": "source.nunjucks",
+      "path": "./syntaxes/nunjucks.tmLanguage.json"
+    }]
+  }
+}

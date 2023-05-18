@@ -1,0 +1,77 @@
+{
+    "name": "nunjucks",
+    "patterns": [
+        {   
+            "name": "comment.line.nunjucks",
+            "begin": "%!",
+            "end": "!%"
+        },
+        {   
+            "name": "comment.block.nunjucks",
+            "begin": "\\[## comment ##\\]",
+            "end": "\\[## endcomment ##\\]"
+        },
+        {   
+            "name": "storage.type.var.nunjucks",
+            "contentName": "variable.nunjucks",
+            "begin": "#!",
+            "end": "!#",
+            "patterns": [
+                {"include": "#inside_block"}
+            ]
+        },
+        {
+            "name": "support.class.nunjucks",
+            "contentName": "variable.nunjucks",
+            "begin": "\\[##",
+            "end": "##\\]",
+            "patterns": [
+                {"include": "#inside_block"}
+            ]
+        }
+    ],
+    "repository": {
+        "inside_block": {
+            "patterns": [
+                {
+                    "name": "constant.language.nunjucks",
+                    "match": "((true|false|and|or|not)\\b)}"
+                },
+                {
+                    "name": "storage.modifier.nunjucks",
+                    "match": "((safe|title|capitalize|join|replace|escape|dump|first|float|groupby)\\b)}"
+                },
+                {
+                    "name": "keyword.operator.nunjucks",
+                    "match": "\\|"
+                },
+                {
+                    "name": "variable.language.nunjucks",
+                    "match": "((macro|endmacro|if|for|endif|endfor|import|from|as)\\b)"
+                },
+                {
+                    "name": "string.nunjucks",
+                    "match": "([\".])(?:(?=(\\\\?))\\2.)*?\\1"
+                },
+                {
+                    "name": "entity.name.function.nunjucks",
+                    "contentName": "variable.nunjucks",
+                    "begin": "\\w+\\(",
+                    "end": "\\)",
+                    "patterns": [
+                        {"include": "#inside_function"}
+                    ]
+                }
+            ]
+        },
+        "inside_function": {
+            "patterns": [
+                {
+                    "name": "string.nunjucks",
+                    "match": "([\".])(?:(?=(\\\\?))\\2.)*?\\1"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.nunjucks"
+}
