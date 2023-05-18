@@ -35,11 +35,11 @@
             "patterns": [
                 {
                     "name": "constant.language.nunjucks",
-                    "match": "((true|false|and|or|not)\\b)}"
+                    "match": "((true|false|and|or|not|as|in)\\b)}"
                 },
                 {
-                    "name": "storage.modifier.nunjucks",
-                    "match": "((safe|title|capitalize|join|replace|escape|dump|first|float|groupby)\\b)}"
+                    "name": "constant.language.nunjucks",
+                    "match": "((safe|title|capitalize|join|escape|dump|first|float|groupby|abs|batch|center|default|dictsort|forceescape|indent|int|last|length|list|lower|random|reject|rejectattr|replace|reverse|round|safe|select|selectattr|slice|sort|string|striptags|sum|title|trim|truncate|upper|urlencode|urlize|wordcount)\\b)}"
                 },
                 {
                     "name": "keyword.operator.nunjucks",
@@ -47,7 +47,11 @@
                 },
                 {
                     "name": "variable.language.nunjucks",
-                    "match": "((macro|endmacro|if|for|endif|endfor|import|from|as)\\b)"
+                    "match": "((macro|endmacro|if|endif|for|endfor|else|elif|asyncEach|endeach|asyncAll|set|endset|block|endblock|filter|endfilter|call|endcall)\\b)"
+                },
+                {
+                    "name": "variable.language.nunjucks",
+                    "match": "((import|extends|from|include|new|ignore|missing|var|context)\\b)"
                 },
                 {
                     "name": "string.nunjucks",
