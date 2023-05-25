@@ -7,11 +7,6 @@
             "end": "!%"
         },
         {   
-            "name": "comment.block.nunjucks",
-            "begin": "\\[## comment ##\\]",
-            "end": "\\[## endcomment ##\\]"
-        },
-        {   
             "name": "storage.type.var.nunjucks",
             "contentName": "variable.nunjucks",
             "begin": "#!",

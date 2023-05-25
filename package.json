@@ -1,8 +1,8 @@
 {
   "name": "nunjucks-for-latex",
   "displayName": "nunjucks-for-LaTeX",
-  "description": "custom nunjucks syntax to be LaTeX compatible",
-  "version": "0.0.3",
+  "description": "Syntax highlighting for a custom Nunjucks syntax designed to be LaTeX compatible",
+  "version": "1.0.0",
   "publisher": "lfletcher23",
   "engines": {
     "vscode": "^1.78.0"
@@ -10,6 +10,7 @@
   "categories": [
     "Programming Languages"
   ],
+  "icon": "images/NJ_Tex_Image_256.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/lfletcher23/nunjucks-for-LaTeX"
@@ -17,7 +18,7 @@
   "contributes": {
     "languages": [{
       "id": "nunjucks",
-      "aliases": ["nunjucks", "nunjucks"],
+      "aliases": ["nunjucks"],
       "extensions": [".njk",".nunjucks"],
       "configuration": "./language-configuration.json"
     }],
