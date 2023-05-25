@@ -2,15 +2,15 @@
   "name": "nunjucks-for-latex",
   "displayName": "nunjucks-for-LaTeX",
   "description": "Syntax highlighting for a custom Nunjucks syntax designed to be LaTeX compatible",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "lfletcher23",
+  "icon": "./images/NJ_Tex_Image_128.png",
   "engines": {
     "vscode": "^1.78.0"
   },
   "categories": [
     "Programming Languages"
   ],
-  "icon": "images/NJ_Tex_Image_256.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/lfletcher23/nunjucks-for-LaTeX"
