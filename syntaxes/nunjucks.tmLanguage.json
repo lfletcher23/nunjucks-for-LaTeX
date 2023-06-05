@@ -68,6 +68,10 @@
                 {
                     "name": "string.nunjucks",
                     "match": "([\"'])(?:(?=(\\\\?))\\2.)*?\\1"
+                },
+                {
+                    "name": "constant.language.nunjucks",
+                    "match": "\\b(true|false)\\b"
                 }
             ]
         }
