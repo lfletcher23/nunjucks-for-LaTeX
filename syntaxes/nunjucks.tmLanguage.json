@@ -30,11 +30,11 @@
             "patterns": [
                 {
                     "name": "constant.language.nunjucks",
-                    "match": "((true|false)\\b)"
+                    "match": "\\b(true|false)\\b"
                 },
                 {
                     "name": "constant.language.nunjucks",
-                    "match": "((texscape|abs|batch|capitalize|center|default|dictsort|dump|escape|e|first|float|forceescape|groupby|indent|int|join|last|length|list|lower|random|reject|rejectattr|replace|reverse|round|safe|select|selectattr|slice|sort|string|striptags|sum|title|trim|truncate|upper|urlencode|urlize|wordcount)\\b)"
+                    "match": "\\b(texscape|abs|batch|capitalize|center|default|dictsort|dump|escape|e|first|float|forceescape|groupby|indent|int|join|last|length|list|lower|random|reject|rejectattr|replace|reverse|round|safe|select|selectattr|slice|sort|string|striptags|sum|title|trim|truncate|upper|urlencode|urlize|wordcount)\\b"
                 },
                 {
                     "name": "keyword.operator.nunjucks",
@@ -42,11 +42,11 @@
                 },
                 {
                     "name": "variable.language.nunjucks",
-                    "match": "((macro|endmacro|if|endif|for|endfor|else|elif|asyncEach|endeach|asyncAll|set|endset|block|endblock|filter|endfilter|call|endcall)\\b)"
+                    "match": "(\\b(macro|endmacro|if|endif|for|endfor|else|elif|asyncEach|endeach|asyncAll|set|endset|block|endblock|filter|endfilter|call|endcall)\\b)"
                 },
                 {
                     "name": "variable.language.nunjucks",
-                    "match": "((and|or|not|as|in|import|extends|from|include|new|ignore|missing|var|context)\\b)"
+                    "match": "(\\b(and|or|not|as|in|import|extends|from|include|new|ignore|missing|var|context)\\b)"
                 },
                 {
                     "name": "string.nunjucks",
