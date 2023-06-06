@@ -12,7 +12,8 @@
             "begin": "#!",
             "end": "!#",
             "patterns": [
-                {"include": "#inside_block"}
+                {"include": "#inside_block"},
+                {"include": "#inside_any"}
             ]
         },
         {
@@ -21,20 +22,33 @@
             "begin": "\\[##",
             "end": "##\\]",
             "patterns": [
-                {"include": "#inside_block"}
+                {"include": "#inside_block"},
+                {"include": "#inside_any"}
             ]
         }
     ],
     "repository": {
-        "inside_block": {
+        "inside_any": {
             "patterns": [
                 {
                     "name": "constant.language.nunjucks",
-                    "match": "\\b(true|false)\\b"
+                    "match": "((true|false)\\b)"
                 },
                 {
-                    "name": "constant.language.nunjucks",
-                    "match": "\\b(texscape|abs|batch|capitalize|center|default|dictsort|dump|escape|e|first|float|forceescape|groupby|indent|int|join|last|length|list|lower|random|reject|rejectattr|replace|reverse|round|safe|select|selectattr|slice|sort|string|striptags|sum|title|trim|truncate|upper|urlencode|urlize|wordcount)\\b"
+                    "name": "variable.language.nunjucks",
+                    "match": "((and|or|not|if|else|new|var)\\b)"
+                },
+                {
+                    "name": "string.nunjucks",
+                    "match": "([\"'])(?:(?=(\\\\?))\\2.)*?\\1"
+                }
+            ]
+        },
+        "inside_block": {
+            "patterns": [
+                {
+                    "name": "variable.language.nunjucks",
+                    "match": "(?<=\\|+\\s*)(texscape|abs|batch|capitalize|center|default|dictsort|dump|escape|e|first|float|forceescape|groupby|indent|int|join|last|length|list|lower|random|reject|rejectattr|replace|reverse|round|safe|select|selectattr|slice|sort|string|striptags|sum|title|trim|truncate|upper|urlencode|urlize|wordcount)\\b"
                 },
                 {
                     "name": "keyword.operator.nunjucks",
@@ -42,15 +56,11 @@
                 },
                 {
                     "name": "variable.language.nunjucks",
-                    "match": "(\\b(macro|endmacro|if|endif|for|endfor|else|elif|asyncEach|endeach|asyncAll|set|endset|block|endblock|filter|endfilter|call|endcall)\\b)"
+                    "match": "((macro|endmacro|endif|for|endfor|elif|asyncEach|endeach|asyncAll|set|endset|block|endblock|filter|endfilter|call|endcall)\\b)"
                 },
                 {
                     "name": "variable.language.nunjucks",
-                    "match": "(\\b(and|or|not|as|in|import|extends|from|include|new|ignore|missing|var|context)\\b)"
-                },
-                {
-                    "name": "string.nunjucks",
-                    "match": "([\"'])(?:(?=(\\\\?))\\2.)*?\\1"
+                    "match": "((as|in|import|extends|from|include|ignore|missing|context)\\b)"
                 },
                 {
                     "name": "entity.name.function.nunjucks",
@@ -58,20 +68,8 @@
                     "begin": "\\w+\\(",
                     "end": "\\)",
                     "patterns": [
-                        {"include": "#inside_function"}
+                        {"include": "#inside_any"}
                     ]
-                }
-            ]
-        },
-        "inside_function": {
-            "patterns": [
-                {
-                    "name": "string.nunjucks",
-                    "match": "([\"'])(?:(?=(\\\\?))\\2.)*?\\1"
-                },
-                {
-                    "name": "constant.language.nunjucks",
-                    "match": "\\b(true|false)\\b"
                 }
             ]
         }
